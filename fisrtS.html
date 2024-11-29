@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style_main.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Практика</title>
+    <script src="script.js" defer></script>
+    <style>
+        .button-container {
+            display: flex; 
+            
+            margin: 20px 0; 
+        }
+
+        button {
+            padding: 10px 9px; 
+            
+            border: none;
+            border-radius: 5px; 
+            background-color: rgb(224, 174, 113); 
+            cursor: pointer;
+            font-size: 16px; 
+            transition: background-color 0.3s; 
+            margin-bottom: 10px;
+        }
+        button:hover {
+            background-color: bisque; 
+        }
+
+
+        .container_table1 {
+            display: none; 
+            opacity: 0; 
+            transition: opacity 0.5s ease; 
+        }
+
+
+        .button2 {
+            margin-bottom: 20px; 
+            padding: 10px 20px; 
+            font-size: 16px; 
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="жираф.jpg" alt="Жираф" width="80" height="80" class="icon">
+            <ul class="fio">
+                <li>Группа ЭФБО-02-23</li>
+                <li>Польщиков Станислав Витальевич</li>
+            </ul>
+        </div>
+
+        <nav>
+            <div>
+                <ul>
+                    <a href="main.html"><li>Главная</li></a>
+                    <a href="fisrtS.html"><li>Первый семестр</li></a>
+                    <a href="secondS.html"><li>Второй семестр</li></a>
+                    <a href="develop.html"><li>Услуги</li></a>
+                    <a href=""><li>Авторизация</li></a>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <aside class="column_left">
+            <div class="navigation">
+                <ul>
+                    <li class="navigation1">Навигация по странице</li>
+                    <a href="#frontend"><li>Лекции</li></a>
+                    <a href="#backend"><li>Практики</li></a>
+                    <a href="#backend"><li>Адрес ВУЗа</li></a>
+                    <a href="#backend"><li>Рабочая программа</li></a>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="column_right">
+            <h1 id="header">Первый семестр</h1> 
+            <div>
+                <h2 id="header2">Лекции</h2>
+                <button id="toggleButton" class="button2">Показать лекции</button>
+                <div class="container_table1" id="lectureTable"><table >
+                    <tr>
+                        <th>Номер</th>
+                        <th>Тема</th>
+                        <th>Посещение</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Фронтенд и бэкенд разработка</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Программирование корпоративных систем</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Русский язык и культура речи</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Математический анализ</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Технологии индустриального программирования</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Создание программного обеспечения</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Социальная психология и педагогика</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Системы искусственного интеллекта и большие данные</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Дискретная математика</td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                </table></div>
+            </div>
+            <script>
+                const toggleButton = document.getElementById('toggleButton');
+                const lectureTable = document.getElementById('lectureTable');
+
+                toggleButton.addEventListener('click', () => {
+                    lectureTable.style.display = "block";
+                    lectureTable.style.opacity = "1";
+
+                });
+            </script>
+            <div>
+                <h2>Практики</h2>
+                <button id="firstSemesterBtn">Посмотреть практики первого семестра</button>
+                <button id="secondSemesterBtn">Посмотреть практики второго семестра</button>
+                <div class="container_table"><table id="practicesTable">
+                    <tr>
+                        <th>Номер</th>
+                        <th>Тема</th>
+                        <th>Посещение</th>
+                        <th>Выполнение</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Фронтенд и бэкенд разработка</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Программирование корпоративных систем</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Русский язык и культура речи</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Математический анализ</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Технологии индустриального программирования</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Создание программного обеспечения</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Социальная психология и педагогика</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Системы искусственного интеллекта и большие данные</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Дискретная математика</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Физическая культура и спорт</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Иностранный язык</td>
+                        <td><input type="checkbox" name="select"></td>
+                        <td><input type="checkbox" name="select"></td>
+                    </tr>
+                </table></div>
+            </div>
+            <script>
+                const firstSemesterPractices = [
+                    { number: 1, topic: "Фронтенд и бэкенд разработка" },
+                    { number: 2, topic: "Программирование корпоративных систем" },
+                    { number: 3, topic: "Русский язык и культура речи" },
+                    { number: 4, topic: "Математический анализ" },
+                    { number: 5, topic: "Технологии индустриального программирования" },
+                    { number: 6, topic: "Создание программного обеспечения" },
+                    { number: 7, topic: "Социальная психология и педагогика" },
+                    { number: 8, topic: "Системы искусственного интеллекта и большие данные" },
+                    { number: 9, topic: "Дискретная математика" },
+                    { number: 10, topic: "Физическая культура и спорт" },
+                    { number: 11, topic: "Иностранный язык" }
+                ];
+            
+                const secondSemesterPractices = [
+                    { number: 1, topic: "Базовое бэкенд-приложение" },
+                    { number: 2, topic: "HTTP-запросы" },
+                    { number: 3, topic: "JSON и работа с ним" },
+                    { number: 4, topic: "HTTP-ответы" },
+                    { number: 5, topic: "Проектирование API" },
+                    { number: 6, topic: "Роутинг и его настройка" },
+                    { number: 7, topic: "NoSQL базы данных" },
+                    { number: 8, topic: "Обеспечение авторизации и доступа пользователей" },
+                    { number: 9, topic: "Работа сторонних сервисов уведомления и авторизации" },
+                    { number: 10, topic: "Основы ReactJS" },
+                    { number: 11, topic: "Работа с компонентами динамической DOM" },
+                    { number: 12, topic: "Использование хуков в React" },
+                    { number: 13, topic: "Основы микросервисной архитектуры" },
+                    { number: 14, topic: "Разработка классических модулей веб-приложений" },
+                    { number: 15, topic: "Тестирование веб-приложений" },
+                    { number: 16, topic: "Оптимизация производительности веб-приложений" }
+                ];
+            
+                const practicesTable = document.getElementById('practicesTable');
+            
+                function loadPractices(practices) {
+                    const rows = practicesTable.getElementsByTagName('tr');
+                    while (rows.length > 1) {
+                        practicesTable.deleteRow(1);
+                    }
+                    practices.forEach(practice => {
+                        const row = practicesTable.insertRow();
+                        row.insertCell(0).innerText = practice.number;
+                        row.insertCell(1).innerText = practice.topic;
+                        row.insertCell(2).innerHTML = '<input type="checkbox" name="select">';
+                        row.insertCell(3).innerHTML = '<input type="checkbox" name="select">';
+                    });
+                }
+                loadPractices(firstSemesterPractices);
+            
+                document.getElementById('firstSemesterBtn').addEventListener('click', () => {
+                    loadPractices(firstSemesterPractices);
+                });
+            
+                document.getElementById('secondSemesterBtn').addEventListener('click', () => {
+                    loadPractices(secondSemesterPractices)
+                })
+            </script>
+            <h3>Занятия проходят по адресу: г. Москва, Проспект Вернадского, д. 78</h3>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa2f99ea0d089f8f083d248b88ac65d0411603f3846125570b41ef0da05ff20b0&amp;source=constructor" width="586" height="401" frameborder="0"></iframe>
+            <h3>Рабочая программа</h3>
+            <object><embed src="ПР_3_HTML_Таблицы и мультимедиа (1).pdf" class="work_pr content"/></object>
+
+            <form id="myForm">
+                <label for="name">Имя:</label>
+                <input type="text" id="name"><br>
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email"><br>
+        
+                <label for="phone">Телефон:</label>
+                <input type="text" id="phone"><br>
+        
+                <label for="date">Дата:</label>
+                <input type="date" id="date"><br>
+        
+                <label for="comment">Комментарий:</label>
+                <textarea id="comment"></textarea><br>
+        
+                <button type="submit" class="button">Отправить</button>
+            </form>
+            <div id="message" class="hidden"></div> <!-- Элемент для сообщения -->
+
+            <style>
+                #message {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-left: 120px;
+                    font-size: 18px;
+                    transition: color 0.5s ease, opacity 0.5s ease; /* Плавный переход для цвета и непрозрачности */
+                }
+
+                .hidden {
+                    opacity: 0; /* Скрываем сообщение по умолчанию */
+                }
+
+                .visible {
+                    opacity: 1; /* Делаем сообщение видимым */
+                }
+
+                .success {
+                    color: rgb(224, 174, 113); /* Цвет текста при успешной отправке */
+                }
+
+                .error {
+                    color: red; /* Цвет текста при ошибке */
+                }
+            </style>
+            <script>                           
+                const formData = {
+                    name: '',
+                    email: '',
+                    phone: '',
+                    date: '',
+                    comment: '',
+
+                    printData: function() {
+                        console.log(`Имя: ${this.name}`);
+                        console.log(`E-mail: ${this.email}`);
+                        console.log(`Телефон: ${this.phone}`);
+                        console.log(`Дата: ${this.date}`);
+                        console.log(`Комментарий: ${this.comment}`);
+                    }
+                };
+
+                function submitForm(event) {
+                    event.preventDefault();
+
+                    const name = document.getElementById('name').value.trim();
+                    const email = document.getElementById('email').value.trim();
+                    const phone = document.getElementById('phone').value.trim();
+                    const date = document.getElementById('date').value;
+                    const comment = document.getElementById('comment').value.trim();
+
+                    if (!name || !email || !comment) {
+                        alert('Пожалуйста, заполните все обязательные поля.');
+                        return;
+                    }
+
+                    const phoneRegex = /^\d+$/; 
+                    if (!phoneRegex.test(phone)) {
+                        alert('Телефон должен содержать только цифры.');
+                        return;
+                    }
+
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+                    if (!emailRegex.test(email)) {
+                        alert('Введите корректный e-mail.');
+                        return;
+                    }
+
+                    formData.name = name;
+                    formData.email = email;
+                    formData.phone = phone;
+                    formData.date = date;
+                    formData.comment = comment;
+
+                    formData.printData();
+                    showMessage("Форма отправлена!", "success");
+                }
+                function showMessage(message, type) {
+                    const messageElement = document.getElementById('message');
+                    messageElement.textContent = message;
+                    messageElement.className = `visible ${type}`; // Добавляем классы для анимации и цвета
+
+                    // Скрываем сообщение через 3 секунды
+                    setTimeout(() => {
+                        messageElement.className = 'hidden'; // Скрываем сообщение
+                    }, 3000);
+                }
+
+                document.getElementById('myForm').addEventListener('submit', function(event) {
+                    event.preventDefault();
+                    submitForm(event); 
+                });
+            </script>
+
+        </div>
+    </main>
+    
+    <footer>
+        <div class="icons">
+            <a href="https://t.me/Stenzel05" target="_blank"><img src="тг.png" width="50" height="50"></a>
+            <a href="https://vk.com/stanis_pol" target="_blank"><img src="вк.png" width="50" height="50"></a>
+        </div>
+        <p class="footer_fio">Ⓒ Польщиков Станислав Витальевич, 2024</p>
+    </footer>
+    <button class="scroll-to-top" id="scrollToTopBtn">⬆</button>
+    <!--<script src="script.js"></script>-->
+</body>
+</html>

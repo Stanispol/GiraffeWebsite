@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style_main.css" rel="stylesheet" type="text/css" media="all" />
+    <title>Практика</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <img src="жираф.jpg" alt="Жираф" width="80" height="80" class="icon">
+            <ul class="fio">
+                <li>Группа ЭФБО-02-23</li>
+                <li>Польщиков Станислав Витальевич</li>
+            </ul>
+        </div>
+
+        <nav>
+            <div>
+                <ul>
+                    <a href="main.html"><li>Главная</li></a>
+                    <a href="fisrtS.html"><li>Первый семестр</li></a>
+                    <a href="secondS.html"><li>Второй семестр</li></a>
+                    <a href="develop.html"><li>Услуги</li></a>
+                    <a href=""><li>Авторизация</li></a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="column_left">
+            <div class="navigation">
+                <ul>
+                    <li class="navigation1">Навигация по странице</li>
+                    <a href="#frontend"><li>Фронтенд</li></a>
+                    <a href="#backend"><li>Бэкенд</li></a>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="column_right">
+                <h1 id="header1">Добро пожаловать на мой сайт</h1>
+                <script>
+                    const header1 = document.getElementById("header1");
+                    header1.addEventListener("click", () => {
+                        alert("Вы кликнули на заголовок - так держать!")
+                    })
+                    header1.addEventListener('mouseover', () => {
+                        header1.style.transform = 'scale(1.1) translateX(20px)'; 
+                    });
+
+                    header1.addEventListener('mouseout', () => {
+                        header1.style.transform = 'scale(1) translateX(0px)'; 
+                    });
+                </script>
+                <div class="aboutme">
+                    <p id="paragraph">Меня зовут Польщиков Станислав и я начинающий специалист по веб-разработке.</p>
+                    <script>
+                        const paragraph = document.getElementById('paragraph');
+                        paragraph.addEventListener('click', () => {
+                            paragraph.style.backgroundColor = "rgb(224, 174, 113)";
+                        });
+                    </script>
+                    <img src="ава.jpg" alt="Это я" class="image" id="me">
+                    <script>
+                        const photo = document.getElementById('me');
+                        photo.addEventListener('mouseover', function() {
+                            photo.style.transform = 'rotate(360deg) scale(1.2)'; 
+                        });
+
+                        photo.addEventListener('mouseout', () => {
+                            photo.style.transform = 'rotate(0deg) scale(1)'; 
+                        });
+                        photo.addEventListener('click', function() {
+                            photo.src = 'жирафуч.jpg'; 
+                        });
+                        photo.addEventListener("dblclick", ()=>{
+                            alert("Не налегай, у меня не так много любимых преподавателей")
+                        })
+                    </script>
+                </div>        
+            <div>
+                <div class="content">
+                    <h2 id="frontend">Фронтенд</h2>
+                    <p id="par">Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст. Фронтенд разработчики используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные и привлекательные интерфейсы. Основная задача фронтенда - обеспечить удобство использования и эстетическук привлекательность.</p>
+                </div>
+                <iframe id="video"
+                    src="https://rutube.ru/play/embed/bef6af81fb877ac72bd15ad611dd3407"
+                    frameBorder="0"
+                    allow="clipboard-write; autoplay"
+                    webkitAllowFullScreen
+                    mozallowfullscreen
+                    allowFullScreen>
+                </iframe>
+                <div class="content">
+                    <h2 id="backend">Бэкенд</h2>
+                    <p>Бэкенд (или серверная часть) - это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями и взаимодействие с базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java или PHP, а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда - обеспечить стабильную работу приложения и безопасность данных.</p>
+                </div>
+                <iframe
+                src="https://rutube.ru/play/embed/7a78f83ec72dd14005fd2cdefd76cdf6"
+                frameBorder="0"
+                allow="clipboard-write; autoplay"
+                webkitAllowFullScreen
+                mozallowfullscreen
+                allowFullScreen
+                ></iframe>
+            </div>
+        </div>
+
+    </main>
+    
+    <footer>
+        <div class="icons">
+            <a href="https://t.me/Stenzel05" target="_blank"><img src="тг.png" width="50" height="50"></a>
+            <a href="https://vk.com/stanis_pol" target="_blank"><img src="вк.png" width="50" height="50"></a>
+        </div>
+        <p class="footer_fio">Ⓒ Польщиков Станислав Витальевич, 2024</p>
+    </footer>        
+    <button class="scroll-to-top" id="scrollToTopBtn">⬆</button>
+    <script src="script.js"></script>
+</body>
+</html>
